@@ -7,18 +7,13 @@
     <h2><em>Ethics, Responsibility, Sustainability</em></h2>
   <br>
   <p>for companies, NGOs and foundations</p><br>
-<div>
-  <a href="http://www.baurconsulting.ch">Baur Consulting</a></h1>
-</div>
-
-<div>
-
-
-<ul><li>analyses</li>
-  <li>assessments</li>
-  <li>services</li>
-</ul>
-</div>
+{% for post in posts %}
+  <div>
+    <p>published: {{ post.published_date}}</p>
+    <h1> <a href="">{{post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
 </body>
 <!DOCTYPE html>
 </html>
